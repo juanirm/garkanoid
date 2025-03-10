@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garkanoid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="hud">
+            <p>Score: <span id="score">0</span></p>
+            <p>Lives: <span id="lives">3</span></p>
+            <p>Level: <span id="level">1</span></p>
+        </div>
+        <div class="game-area">
+            <div class="top-border"></div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="startScreen" class="overlay">
+            <h1>Garkanoid</h1>
+            <div class="instructions">
+                <h2>How to Play</h2>
+                <h3>Objective</h3>
+                <p>Break all the bricks to win! Don't let the energy ball fall below the lightsaber paddle.</p>
+                
+                <h3>Controls</h3>
+                <ul>
+                    <li>Move paddle with left/right arrow keys</li>
+                    <li>OR use mouse to control the paddle</li>
+                    <li>Press SPACE to start the game</li>
+                    <li>You have 3 lives - don't lose them all!</li>
+                </ul>
+                
+                <h3>Power-ups</h3>
+                <p>Breaking bricks may drop special Force powers:</p>
+                <ul>
+                    <li>🔵 Blue Orb - Force Push (Wider Paddle)</li>
+                    <li>🔴 Red Orb - Force Split (Multi-Ball)</li>
+                    <li>⚡ Yellow Orb - Force Speed (Faster Balls)</li>
+                </ul>
+            </div>
+            <button id="startButton">Start Game</button>
+        </div>
+        <div id="gameOverScreen" class="overlay hidden">
+            <h1>Game Over</h1>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="restartButton">Play Again</button>
+        </div>
+    </div>
+    <script type="module" src="game.js"></script>
+</body>
+</html>

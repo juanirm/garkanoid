@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #ffd700;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hud {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #2ecc71;
+    font-size: 18px;
+    text-shadow: 0 0 5px rgba(46, 204, 113, 0.8);
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+}
+
+.top-border {
+    height: 2px;
+    background-color: #2ecc71;
+    box-shadow: 0 0 10px #2ecc71;
+}
+
+canvas {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: block;
+    box-shadow: 0 0 20px rgba(45, 255, 196, 0.5);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #ffd700;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.instructions {
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.instructions h2 {
+    color: #2ecc71;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(46, 204, 113, 0.8);
+}
+
+.instructions h3 {
+    color: #3498db;
+    margin: 15px 0 10px;
+    text-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
+}
+
+.instructions ul {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.instructions li {
+    margin: 5px 0;
+    color: #fff;
+}
+
+button {
+    background: #2ecc71;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.8);
+}
+
+button:hover {
+    background: #27ae60;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Star Wars style scrolling text effect */
+.instructions {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(46, 204, 113, 0.2),
+                    0 0 10px rgba(46, 204, 113, 0.2),
+                    0 0 15px rgba(46, 204, 113, 0.2);
+    }
+    to {
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.4),
+                    0 0 20px rgba(46, 204, 113, 0.4),
+                    0 0 30px rgba(46, 204, 113, 0.4);
+    }
+}
+
+/* Score and lives display */
+.controls p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.controls span {
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+}
+
+/* Game Over screen specific styles */
+#gameOverScreen h1 {
+    color: #e74c3c;
+    text-shadow: 0 0 15px rgba(231, 76, 60, 0.8);
+}
+
+#finalScore {
+    font-size: 2em;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    margin: 10px 0;
+}
+
+/* Power-up item styles in instructions */
+.instructions ul li:nth-child(1) { color: #3498db; }
+.instructions ul li:nth-child(2) { color: #e74c3c; }
+.instructions ul li:nth-child(3) { color: #f1c40f; }
