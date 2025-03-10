@@ -49,4 +49,40 @@ If you encounter any issues:
   Then access the game at `http://localhost:8080`.
 * If you see any console errors, please report them along with your browser and operating system details.
 
+## Game Levels
+
+Garkanoid features 10 exciting levels, each with increasing difficulty:
+
+1. Each level has a unique brick layout, including:
+   - Rectangle
+   - Triangle
+   - Diamond
+   - Circle
+   - Random patterns
+
+2. The ball speed increases by 10% with each new level, making the game progressively more challenging.
+
+3. The score multiplier increases with each level, rewarding players for reaching higher levels.
+
+4. The brick layouts repeat every 5 levels, but with increased difficulty due to higher ball speed and more points per brick.
+
+## Power-ups
+
+During gameplay, you may encounter the following power-ups:
+
+1. 🔵 Blue Orb - Force Push (Wider Paddle):
+   - Temporarily increases the width of your paddle, making it easier to hit the ball.
+   - Duration: 10 seconds
+
+2. 🔴 Red Orb - Force Split (Multi-Ball):
+   - Splits the current ball into three, giving you more chances to break bricks.
+   - The extra balls remain in play until they fall off the screen.
+
+3. ⚡ Yellow Orb - Force Speed (Faster Balls):
+   - Temporarily increases the speed of all balls on the screen.
+   - Duration: 8 seconds
+   - This power-up can be both helpful and challenging, as faster balls can break more bricks quickly but are harder to control.
+
+Power-ups are randomly generated when breaking certain bricks. Catch them with your paddle to activate their effects!
+
 Enjoy playing Garkanoid!
